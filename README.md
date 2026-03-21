@@ -1,36 +1,66 @@
-# Generative AI Engineer | AWS Solutions Architect Professional | AI Systems Builder
+# EduAI Connect -- AI-Powered Education Analytics Platform
 
-I build production AI systems at the intersection of generative AI, quantitative risk, and regulatory compliance. Three live projects spanning hedge fund analytics, education AI, and sports betting analytics -- all deployed on AWS with real infrastructure. AWS Solutions Architect Professional and AWS Certified Generative AI Professional. Former Technical Support Engineer at Amazon Robotics.
+**FERPA-Compliant | Amazon Bedrock | LangGraph | Multi-Agent RAG**
 
-## Projects
+**Live Demo:** https://eduai-connect-horner.streamlit.app
 
-| Project | What It Does | Live Demo |
-|---------|-------------|-----------|
-| **FinTech AI** | Hedge fund intelligence platform. Three LangGraph agents, Monte Carlo CVaR, five stress scenarios, full SR 11-7 MRM framework | [fintech-ai-horner.streamlit.app](https://fintech-ai-horner.streamlit.app) |
-| **EduAI Connect** | FERPA-compliant AI for teachers. Multi-agent RAG system identifies at-risk students with risk levels and intervention recommendations | [eduai-connect-horner.streamlit.app](https://eduai-connect-horner.streamlit.app) |
-| **ShootItPicks** | Live SaaS at shootitpicks.com. 5-step Chain of Thought AI, Monte Carlo CVaR, MRM confidence calibration, Stripe billing | [shootitpicks.com](https://shootitpicks.com) |
-
-Every system includes governance infrastructure -- not just the AI pipeline. ShootItPicks has an MRM confidence calibration layer. EduAI Connect enforces FERPA at the infrastructure level. FinTech AI implements a full SR 11-7 Model Risk Management framework with model inventory, independent validation, drift detection, and audit logging.
+EduAI Connect helps teachers proactively identify at-risk students using AI-driven insights. A teacher types a natural language question like "who needs help in Math?" and the system analyzes every student's grades, attendance, and engagement data, returning specific students with risk levels (HIGH/MEDIUM/LOW) and recommended interventions. Built on Amazon Bedrock with full FERPA compliance enforced at the infrastructure level.
 
 ## Tech Stack
 
-**AI/ML:** Amazon Bedrock, LangChain, LangGraph, FAISS, Titan Embeddings, OpenAI GPT-4o, Gemini
+| Layer | Technology |
+|---|---|
+| AI/ML | Amazon Bedrock (Claude 3 Sonnet, Titan Embeddings) |
+| RAG Framework | LangChain 0.3, LCEL |
+| Agent Orchestration | LangGraph (StateGraph) |
+| Vector Store | FAISS |
+| API Backend | FastAPI |
+| Dashboard | Streamlit |
+| Infrastructure | AWS CDK (Python) |
+| Security | Bedrock Guardrails, KMS, IAM, CloudTrail |
 
-**AWS:** Lambda, API Gateway, Cognito, S3, DynamoDB, KMS, CloudTrail, EventBridge, CDK, CloudFront
+## Architecture
 
-**Languages:** Python, JavaScript, React
+**Data Flow:** Canvas LMS -> EventBridge -> Lambda -> S3 (KMS Encrypted) -> Titan Embeddings -> FAISS -> LangChain LCEL -> Bedrock Claude -> Guardrails -> FastAPI -> Streamlit
 
-**DevOps:** GitHub Actions, Terraform, Docker
+**Agent Orchestration:** START -> Grading Agent -> At-Risk Detection Agent -> END
 
-## Certifications
+## Key Architecture Decisions
 
-- AWS Certified Solutions Architect -- Professional (expires Apr 2028)
-- AWS Certified Generative AI Professional (expires Feb 2029)
-- AWS Certified Solutions Architect -- Associate (expires Apr 2028)
-- AWS Certified AI Practitioner (expires Feb 2029)
+- **RAG over fine-tuning:** student data stays in FAISS/S3, never baked into model weights. Supports FERPA requirements for data deletion, auditing, and access control
+- **HyDE query transformation:** generates a hypothetical answer first, embeds that, and uses it as the search query -- produces significantly better retrieval than embedding the raw question
+- **LangGraph over simple functions:** shared TypedDict state enables grading analysis to directly inform risk scoring. Adding new agents requires only a new node and edge
+- **FAISS for dev, OpenSearch Serverless for prod:** CDK stack designed for the swap -- vector store interface abstracted so migration requires one config change
 
-## Links
+## FERPA Compliance
 
-- **Resume:** https://resume.johnathancloudspace.com
-- **ShootItPicks:** https://shootitpicks.com
-- **LinkedIn:** https://www.linkedin.com/in/johnathan-horner-99b37782/
+| Control | Implementation |
+|---|---|
+| Encryption at Rest | KMS CMK with auto key rotation |
+| Encryption in Transit | TLS 1.2+ |
+| Access Control | IAM least-privilege, scoped to specific ARNs |
+| PII Protection | Bedrock Guardrails -- SSNs blocked, names anonymized |
+| Audit Trail | CloudTrail logs every Bedrock API call |
+| Data Privacy | Synthetic data only -- no real student data |
+
+## Demo Queries
+
+| Question | What It Does |
+|---|---|
+| "Who needs help in Math?" | Finds students with low Math grades |
+| "Which students are at risk?" | Full at-risk analysis with risk levels |
+| "Tell me about Marcus Johnson" | Full student profile with grades and trends |
+| "How is my class doing overall?" | Class-wide performance summary |
+
+## Quick Start
+
+- Clone the repo
+- `pip install requirements`
+- Run in demo mode: `DEMO_MODE=true streamlit run streamlit_app/streamlit_app.py`
+- For full AWS mode: configure Bedrock credentials and run `vector_store.py` first
+
+---
+
+**Built by Johnathan Horner**
+AWS Solutions Architect Professional | AWS Certified Generative AI Professional
+[resume.johnathancloudspace.com](https://resume.johnathancloudspace.com)
