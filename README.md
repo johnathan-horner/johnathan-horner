@@ -1,35 +1,63 @@
 # Johnathan Horner
 
-Generative AI Engineer | AWS Solutions Architect Professional | AI Systems Builder
+**AI Solutions Architect | Generative AI Strategy & Enablement**
 
-I build production AI systems at the intersection of generative AI, quantitative risk, and regulatory compliance. Three live projects spanning hedge fund analytics, education AI, and sports betting analytics -- all deployed on AWS with real infrastructure. AWS Solutions Architect Professional and AWS Certified Generative AI Professional. Former Technical Support Engineer at Amazon Robotics.
+I design and ship production AI systems on AWS for regulated industries. Six production systems across fintech (SR 11-7), healthcare (HIPAA), education (FERPA), government (FedRAMP), fraud detection, and legal tech.
 
-## Projects
+I don't build demos. I build systems that can pass an audit.
 
-| Project | What It Does | Live Demo |
-|---|---|---|
-| FinTech AI | Hedge fund intelligence platform. Three LangGraph agents, Monte Carlo CVaR, five stress scenarios, full SR 11-7 MRM framework | [fintech-ai-horner.streamlit.app](https://fintech-ai-horner.streamlit.app) |
-| EduAI Connect | FERPA-compliant AI for teachers. Multi-agent RAG system identifies at-risk students with risk levels and intervention recommendations | [eduai-connect-horner.streamlit.app](https://eduai-connect-horner.streamlit.app) |
-| ShootItPicks | Live SaaS at shootitpicks.com. 5-step Chain of Thought AI, Monte Carlo CVaR, MRM confidence calibration, Stripe billing | [shootitpicks.com](https://shootitpicks.com) |
+---
 
-Every system includes governance infrastructure -- not just the AI pipeline. ShootItPicks has an MRM confidence calibration layer. EduAI Connect enforces FERPA at the infrastructure level. FinTech AI implements a full SR 11-7 Model Risk Management framework with model inventory, independent validation, drift detection, and audit logging.
+### What I do
 
-## Tech Stack
+- **Architect** Agentic RAG and multi-agent systems on AWS with Bedrock, LangGraph, and SageMaker
+- **Ship** production AI with full governance: MRM frameworks, audit trails, drift detection, RBAC
+- **Translate** business requirements into reference architectures and audit-ready documentation
+- **Build** reusable CDK constructs so my next regulated AI workload deploys in days, not months
 
-AI/ML: Amazon Bedrock, LangChain, LangGraph, FAISS, Titan Embeddings, OpenAI GPT-4o, Gemini
-AWS: Lambda, API Gateway, Cognito, S3, DynamoDB, KMS, CloudTrail, EventBridge, CDK, CloudFront
-Languages: Python, JavaScript, React
-DevOps: GitHub Actions, Terraform, Docker
+---
 
-## Certifications
+### Production AI Systems
 
-- AWS Certified Solutions Architect -- Professional (expires Apr 2028)
-- AWS Certified Generative AI Professional (expires Feb 2029)
-- AWS Certified Solutions Architect -- Associate (expires Apr 2028)
-- AWS Certified AI Practitioner (expires Feb 2029)
+| System | Vertical | Compliance | Pattern |
+| --- | --- | --- | --- |
+| [ShootItPicks](https://github.com/johnathan-horner/shootitpicks-terraform) | Sports analytics SaaS (live, revenue) | MRM | Chain-of-Thought + CRAG validation |
+| [FinTech AI](https://github.com/johnathan-horner/fintech-ai) | Financial services | SR 11-7 | Agentic RAG with Monte Carlo CVaR |
+| [EduAI Connect](https://github.com/johnathan-horner/eduai-connect) | Education | FERPA | Agentic RAG with HyDE query transformation |
+| [Medical Image Triage](https://github.com/johnathan-horner/medical-image-triage) | Healthcare | HIPAA | EfficientNetB0 with confidence-tiered routing |
+| [Transaction Anomaly Detection](https://github.com/johnathan-horner/financial-anomaly-detection) | Financial services | SR 11-7 | PyTorch autoencoder + LangGraph investigation |
+| [Legal Document Classifier](https://github.com/johnathan-horner/legal-document-classifier) | Government | FedRAMP | Agentic RAG (DistilBERT planner + parallel agents) |
 
-## Links
+---
 
-- Resume: https://resume.johnathancloudspace.com
-- ShootItPicks: https://shootitpicks.com
-- LinkedIn: https://www.linkedin.com/in/johnathan-horner-99b37782/
+### Stack
+
+**AI/ML:** Claude (Sonnet, Opus), Amazon Bedrock, SageMaker, LangGraph, LangChain, Hugging Face Transformers, PyTorch, TensorFlow, FAISS, Titan Embeddings, FastMCP
+
+**AWS:** Lambda, API Gateway, DynamoDB, S3, CloudFront, Cognito, Kinesis, SQS, SNS, EventBridge, ECS Fargate, Textract, KMS, CloudWatch, CDK, IAM, CloudTrail
+
+**RAG Patterns:** Hybrid RAG, Agentic RAG, Corrective RAG (CRAG), HyDE query transformation
+
+**Compliance Frameworks:** SR 11-7 (Model Risk Management), HIPAA, FERPA, FedRAMP-aware, audit trail design, drift detection, RBAC
+
+---
+
+### Certifications
+
+- AWS Certified Solutions Architect – Professional (SAP-C02)
+- AWS Certified Generative AI Developer – Professional (AIP-C01)
+- AWS Certified Solutions Architect – Associate (SAA-C03)
+- AWS Certified AI Practitioner (AIF-C01)
+
+---
+
+### Links
+
+- **Portfolio:** [portfolio.johnathancloudspace.com](https://portfolio.johnathancloudspace.com)
+- **Resume:** [resume.johnathancloudspace.com](https://resume.johnathancloudspace.com)
+- **LinkedIn:** [linkedin.com/in/johnathan-horner](https://linkedin.com/in/johnathan-horner)
+- **Email:** mrhorner819@gmail.com
+
+---
+
+*Founder, Shoot It Analytics LLC. Brooklyn, NY.*
