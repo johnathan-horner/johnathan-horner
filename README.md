@@ -1,63 +1,57 @@
 # Johnathan Horner
 
-**AI Solutions Architect | Generative AI Strategy & Enablement**
+**AI Solutions Architect · Anthropic Claude · Amazon Bedrock · MCP · Production AI for Regulated Industries**
 
-I design and ship production AI systems on AWS for regulated industries. Six production systems across fintech (SR 11-7), healthcare (HIPAA), education (FERPA), government (FedRAMP), fraud detection, and legal tech.
-
-I don't build demos. I build systems that can pass an audit.
-
----
-
-### What I do
-
-- **Architect** Agentic RAG and multi-agent systems on AWS with Bedrock, LangGraph, and SageMaker
-- **Ship** production AI with full governance: MRM frameworks, audit trails, drift detection, RBAC
-- **Translate** business requirements into reference architectures and audit-ready documentation
-- **Build** reusable CDK constructs so my next regulated AI workload deploys in days, not months
+📍 Brooklyn, NY · 🇺🇸 U.S. Citizen
+🔗 [Portfolio](https://portfolio.johnathancloudspace.com) · [Resume](https://resume.johnathancloudspace.com) · [LinkedIn](https://www.linkedin.com/in/johnathan-horner-99b37782) · [npm](https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs)
 
 ---
 
-### Production AI Systems
+## What I Do
 
-| System | Vertical | Compliance | Pattern |
-| --- | --- | --- | --- |
-| [ShootItPicks](https://github.com/johnathan-horner/shootitpicks-terraform) | Sports analytics SaaS (live, revenue) | MRM | Chain-of-Thought + CRAG validation |
-| [FinTech AI](https://github.com/johnathan-horner/fintech-ai) | Financial services | SR 11-7 | Agentic RAG with Monte Carlo CVaR |
-| [EduAI Connect](https://github.com/johnathan-horner/eduai-connect) | Education | FERPA | Agentic RAG with HyDE query transformation |
-| [Medical Image Triage](https://github.com/johnathan-horner/medical-image-triage) | Healthcare | HIPAA | EfficientNetB0 with confidence-tiered routing |
-| [Transaction Anomaly Detection](https://github.com/johnathan-horner/financial-anomaly-detection) | Financial services | SR 11-7 | PyTorch autoencoder + LangGraph investigation |
-| [Legal Document Classifier](https://github.com/johnathan-horner/legal-document-classifier) | Government | FedRAMP | Agentic RAG (DistilBERT planner + parallel agents) |
+I build production AI systems on AWS for regulated industries — financial services, healthcare, education, and government. Eight deployed systems across HIPAA, FedRAMP, FERPA, and federal model risk management (SR 11-7 / SR 26-2) standards. Every system ships with governance, compliance, and audit-ready documentation built in from day one, not bolted on at audit time.
+
+**Tech stack:** Anthropic Claude (API, Bedrock, Claude Code) · Amazon Bedrock · Google Gemini · LangGraph · MCP (FastMCP) · SageMaker · AWS CDK · TypeScript · Python
 
 ---
 
-### Stack
+## Production Systems
 
-**AI/ML:** Claude (Sonnet, Opus), Amazon Bedrock, SageMaker, LangGraph, LangChain, Hugging Face Transformers, PyTorch, TensorFlow, FAISS, Titan Embeddings, FastMCP
-
-**AWS:** Lambda, API Gateway, DynamoDB, S3, CloudFront, Cognito, Kinesis, SQS, SNS, EventBridge, ECS Fargate, Textract, KMS, CloudWatch, CDK, IAM, CloudTrail
-
-**RAG Patterns:** Hybrid RAG, Agentic RAG, Corrective RAG (CRAG), HyDE query transformation
-
-**Compliance Frameworks:** SR 11-7 (Model Risk Management), HIPAA, FERPA, FedRAMP-aware, audit trail design, drift detection, RBAC
+| System | Pattern | Compliance |
+| --- | --- | --- |
+| **ShootItPicks** ([live](https://shootitpicks.com)) | Hybrid RAG · 5-step Chain of Thought · Monte Carlo CVaR | SR 11-7 / SR 26-2 |
+| **FinTech AI** | Three LangGraph agents on Bedrock Claude · PSI drift monitoring | SR 11-7 / SR 26-2 |
+| **Transaction Anomaly Detection** | Agentic RAG · PyTorch autoencoder + 4-node LangGraph agent | SR 11-7 / SR 26-2 |
+| **Legal Document Classification** | Corrective RAG · DistilBERT + 3 parallel LangGraph agents | FedRAMP |
+| **Medical Image Triage** | Multimodal RAG · EfficientNetB0 on SageMaker Serverless · MCP server | HIPAA |
+| **EduAI Connect** | Bedrock Claude 3 Sonnet · HyDE RAG · Bedrock Guardrails | FERPA |
+| **ConnectIQ** | Amazon Connect · Lex · Bedrock · multi-tenant SaaS | — |
+| **cdk-ai-constructs** ([npm](https://www.npmjs.com/package/@johnathan-horner/cdk-ai-constructs)) | Open-source L3 CDK constructs powering all 8 systems | — |
 
 ---
 
-### Certifications
+## Writing
 
-- AWS Certified Solutions Architect – Professional (SAP-C02)
-- AWS Certified Generative AI Developer – Professional (AIP-C01)
-- AWS Certified Solutions Architect – Associate (SAA-C03)
+Selected posts on production AI architecture, governance, and multi-agent systems:
+
+- [Why FinTech AI Needs SR 11-7 Governance](https://www.linkedin.com/posts/johnathan-horner-99b37782_fintech-modelriskmanagement-sr117-activity-7441141015031332864-0MYC)
+- [Model Risk Management with Monte Carlo Methods](https://www.linkedin.com/posts/johnathan-horner-99b37782_mrm-airiskmanagement-montecarlo-activity-7440387700899250176-QGt0)
+- [MCP Servers for Healthcare AI on AWS](https://www.linkedin.com/posts/johnathan-horner-99b37782_mcp-healthcareai-aws-activity-7457424375257022464-eXIT) — 1,066 impressions
+- [Agentic RAG with MCP Integration for LegalTech](https://www.linkedin.com/posts/johnathan-horner-99b37782_mcp-legaltech-agenticrag-activity-7462508451320000512-Oq_k)
+
+---
+
+## Certifications
+
+- AWS Certified Solutions Architect — Professional (SAP-C02)
+- AWS Certified Generative AI Developer — Professional (AIP-C01)
 - AWS Certified AI Practitioner (AIF-C01)
+- AWS Certified Solutions Architect — Associate (SAA-C03)
 
 ---
 
-### Links
+## Get in Touch
 
-- **Portfolio:** [portfolio.johnathancloudspace.com](https://portfolio.johnathancloudspace.com)
-- **Resume:** [resume.johnathancloudspace.com](https://resume.johnathancloudspace.com)
-- **LinkedIn:** [linkedin.com/in/johnathan-horner](https://linkedin.com/in/johnathan-horner)
-- **Email:** mrhorner819@gmail.com
+I work with teams building production AI in regulated environments. If that's your space, reach out:
 
----
-
-*Founder, Shoot It Analytics LLC. Brooklyn, NY.*
+📧 mrhorner819@gmail.com · 🔗 [LinkedIn](https://www.linkedin.com/in/johnathan-horner-99b37782)
