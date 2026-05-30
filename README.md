@@ -36,7 +36,7 @@ Selected posts on production AI architecture, governance, and multi-agent system
 
 - [Why FinTech AI Needs SR 11-7 Governance](https://www.linkedin.com/posts/johnathan-horner-99b37782_fintech-modelriskmanagement-sr117-activity-7441141015031332864-0MYC)
 - [Model Risk Management with Monte Carlo Methods](https://www.linkedin.com/posts/johnathan-horner-99b37782_mrm-airiskmanagement-montecarlo-activity-7440387700899250176-QGt0)
-- [MCP Servers for Healthcare AI on AWS](https://www.linkedin.com/posts/johnathan-horner-99b37782_mcp-healthcareai-aws-activity-7457424375257022464-eXIT) — 1,066 impressions
+- [MCP Servers for Healthcare AI on AWS](https://www.linkedin.com/posts/johnathan-horner-99b37782_mcp-healthcareai-aws-activity-7457424375257022464-eXIT)
 - [Agentic RAG with MCP Integration for LegalTech](https://www.linkedin.com/posts/johnathan-horner-99b37782_mcp-legaltech-agenticrag-activity-7462508451320000512-Oq_k)
 
 ---
