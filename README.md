@@ -33,7 +33,7 @@ Shoot It Analytics LLC, built with public or synthetic data.
 | **[Legal Document Type Classifier](https://github.com/johnathan-horner/legal-document-classifier)** | Classifies 8 legal document types with confidence routing to review | In progress |
 | **[Medical Image Triage](https://github.com/johnathan-horner/medical-image-triage)** | ResNet18 on chest X-rays with confidence routing and an LLM summary; decision support only | In progress |
 | **[EduAI Connect](https://github.com/johnathan-horner/eduai-connect)** | RAG and agents for spotting students who are falling behind | In progress |
-| **ConnectIQ** | Multi-tenant AI contact center design on Amazon Connect, Lex and Bedrock | Coming soon |
+| **ConnectIQ** | Multi-tenant AI contact center design on Amazon Connect, Lex and Bedrock | In progress |
 | **[cdk-ai-constructs](https://github.com/johnathan-horner/cdk-ai-constructs)** | TypeScript AWS CDK library, 9 constructs | In progress |
 
 Each repo's README has a status line, measured results and limits.
